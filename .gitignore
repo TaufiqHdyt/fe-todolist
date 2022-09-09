@@ -27,8 +27,5 @@ coverage
 *.sln
 *.sw?
 
-# Lock Files
-*lock.*
-
 # ENV
 .env
