@@ -9,6 +9,16 @@ export default {
       username: '',
       password: '',
     },
+    area: [
+      {
+        id: 1,
+        name: 'Satu',
+      },
+      {
+        id: 2,
+        name: 'Dua',
+      },
+    ],
   }),
   computed: {
     ...mapState(d$auth, ['g$user']),
@@ -34,5 +44,10 @@ export default {
       <button type="submit">Log In</button>
     </form>
     <p v-else>{{ g$user.name }}</p>
+    <div>
+      <ol>
+        <li v-for="item in area" :key="item.id">{{ item.name }}</li>
+      </ol>
+    </div>
   </main>
 </template>
